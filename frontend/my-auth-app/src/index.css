@@ -1,3 +1,28 @@
-body { font-family: Arial, sans-serif; margin: 0; padding: 1rem; background: #f4f4f4; }
-input { display: block; margin: 0.5rem 0; padding: 0.5rem; }
-button { padding: 0.4rem 0.8rem; }
+﻿body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 1rem;
+  background: #f3f4f6;
+}
+input, select, button {
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+}
+input, select {
+  width: 100%;
+  margin: 0.25rem 0;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+button {
+  cursor: pointer;
+  border: 1px solid #1f2937;
+  border-radius: 4px;
+  background: #1f2937;
+  color: white;
+  padding: 0.5rem 0.75rem;
+}
+button:hover {
+  background: #111827;
+}
