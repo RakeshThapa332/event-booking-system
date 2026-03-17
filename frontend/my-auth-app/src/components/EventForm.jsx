@@ -31,14 +31,18 @@ function EventForm({ onEventCreated }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{ border: "1px solid #ccc", borderRadius: 8, padding: 12, background: "#fff" }}>
+    <form onSubmit={handleSubmit} className="event-form-panel">
       <h2>Create New Event</h2>
-      {error && <p style={{ color: "red" }}>{error}</p>}
-      <input required placeholder="Title" value={title} onChange={(e) => setTitle(e.target.value)} />
-      <input placeholder="Description" value={description} onChange={(e) => setDescription(e.target.value)} />
-      <input required placeholder="Location" value={location} onChange={(e) => setLocation(e.target.value)} />
-      <input required type="datetime-local" value={date} onChange={(e) => setDate(e.target.value)} />
-      <button style={{ marginTop: 8 }} type="submit">Create Event</button>
+      {error && <p className="error">{error}</p>}
+      <div className="form-block">
+        <input required placeholder="Title" value={title} onChange={(e) => setTitle(e.target.value)} />
+        <input placeholder="Description" value={description} onChange={(e) => setDescription(e.target.value)} />
+        <input required placeholder="Location" value={location} onChange={(e) => setLocation(e.target.value)} />
+        <div className="date-row">
+          <input required type="datetime-local" value={date} onChange={(e) => setDate(e.target.value)} />
+        </div>
+      </div>
+      <button className="btn btn-primary" type="submit">Create Event</button>
     </form>
   );
 }

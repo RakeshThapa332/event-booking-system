@@ -1,12 +1,10 @@
 ﻿function Navbar({ onLogout }) {
   return (
-    <div style={{ background: "#1f2937", color: "#fff", padding: 10, borderRadius: 8, marginBottom: 8, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+    <div className="navbar">
       <div>
-        Logged in. You can create events, view events, and make bookings.
+        <strong>Dashboard</strong> • Create events, view sessions, and manage bookings.
       </div>
-      <button onClick={onLogout} style={{ background: "#ef4444", color: "#fff", border: "none", borderRadius: 4, padding: "0.4rem 0.8rem" }}>
-        Logout
-      </button>
+      <button className="logout-pill" onClick={onLogout}>Logout</button>
     </div>
   );
 }
