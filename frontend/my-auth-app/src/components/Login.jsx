@@ -20,11 +20,10 @@ function Login({ onSuccess }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{ marginBottom: 16 }}>
-      <h2>Login</h2>
-      <input placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
-      <input placeholder="Password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-      <button type="submit">Login</button>
+    <form className="form-block" onSubmit={handleSubmit}>
+      <div className="field"><label>Username</label><input placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} required /></div>
+      <div className="field"><label>Password</label><input placeholder="Password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} required /></div>
+      <button type="submit" className="btn btn-primary">Login</button>
     </form>
   );
 }

@@ -7,5 +7,8 @@ class Booking(models.Model):
     event = models.ForeignKey(Event, on_delete=models.CASCADE)
     booked_at = models.DateTimeField(auto_now_add=True)
 
+    class Meta:
+        unique_together = ("user", "event")
+
     def __str__(self):
         return f"{self.user.username} booked {self.event.title}"
